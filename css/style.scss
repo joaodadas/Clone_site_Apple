@@ -29,4 +29,76 @@ body {
     background-color: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(20px);
 }
+
+.header-container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+
+.nav-list-desktop {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: $gray;
+    display: block;
+    padding: 5px 10px;
+
+    font-size: 11px;
+    opacity: 1;
+    transition: 0.5s ease;
+
+    &:hover {
+        opacity: .7;
+
+    }
+}
+
+.nav-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .nav-list-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hamburguer {
+        width: 25px;
+        height: 25px;
+
+        position: relative;
+
+        z-index: 900;
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+
+        top: 38%;
+        left: 23%;
+
+        width: 55%;
+        height: 4%;
+        background-color: $gray;
+        transition: 1s ease;
+    }
+
+    &::before {
+        content: " ";
+    }
+
+}
   
