@@ -67,4 +67,49 @@ body {
     position: relative;
     z-index: 900;
   }
+  .hamburguer:after {
+    content: "";
+    position: absolute;
+    top: 38%;
+    left: 23%;
+    width: 55%;
+    height: 4%;
+    background-color: #d6d6d6;
+    transition: 1s ease;
+  }
+  .hamburguer:before {
+    content: "";
+    position: absolute;
+    top: 63%;
+    left: 23%;
+    width: 55%;
+    height: 4%;
+    background-color: #d6d6d6;
+    transition: 1s ease;
+  }
+  .hamburguer.hamburguer-active {
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  .hamburguer.hamburguer-active:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    width: 55%;
+    height: 4%;
+    transform: rotate(225deg);
+    background-color: #d6d6d6;
+  }
+  .hamburguer.hamburguer-active:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: rotate(-405deg);
+    width: 55%;
+    height: 4%;
+    background-color: #d6d6d6;
+  }
 }/*# sourceMappingURL=style.css.map */
